@@ -1,0 +1,38 @@
+float choice;
+int x;
+int y;
+
+void setup() {
+  size(400,400);
+  background(#fbeca8);
+  
+  x = width/2;
+  y = height/2;
+}
+
+void draw() {
+  
+  choice = random(1);
+   
+  println(choice);
+  
+  
+  if(choice < 0.3) {
+      x = x -1;
+  }
+  
+  if(choice > 0.3 && choice <0.4) {
+      x = x + 1;
+  }
+  
+  if(choice > 0.4 && choice <0.7) {
+    y = y - 1; 
+  }
+  
+  if(choice > 0.7) {
+    y = y + 1; 
+  }
+  noStroke();
+  fill(#b22222);
+  ellipse(x,y,10,10);
+}
